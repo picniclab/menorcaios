@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Gracias</title>
+</head>
+<body class="d-flex align-items-center">
+
+
+<div class="container encuesta">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-sm-12 col-md-9 gracias-box">
+                <img class="logo" src="img/logo.png" alt="">
+                <img width="120" class="check" src="img/check.png" alt="">
+                <p>¡Muchas Gracias por terminar la encuesta!</p>
+                <a href="perfil.html" class="btn btn-menorka">Volver</a>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.transit.min.js"></script>
+<script>
+    $('.check').transition({perspective: '100px', rotateY: '360deg'},1200);
+
+    $('.btn-menorka').click(function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        $('.encuesta').transition({ scale: 0, opacity: 0 }, 300, 'snap',function(){
+            window.location = href;
+        });
+
+    });
+
+
+</script>
+
+</body>
+</html>

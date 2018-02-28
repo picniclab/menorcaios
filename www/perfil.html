@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Perfil</title>
+</head>
+<body class="d-flex align-items-center top-img">
+
+<div class="container perfil">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-9 perfil-box">
+            <img src="img/perfil.jpg" alt="">
+            <h2>Carlos Soto</h2>
+            <h3>Gerente de tienda Arequipa</h3>
+        </div>
+
+        <div class="encuestas-box">
+            <h1>Seleccione una de las encuestas</h1>
+            <a href="" class="encuesta-item">Encuesta seguro desgravamen</a>
+            <a href="" class="encuesta-item">Encuesta perfil al cliente</a>
+            <a href="" class="encuesta-item">Encuesta servicio al cliente</a>
+            <a href="" class="encuesta-item">Encuesta por visita</a>
+            <a href="online-1.html" class="encuesta-item">Encuesta Online & Telefonica</a>
+        </div>
+    </div>
+
+</div>
+<script src="js/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/jquery.transit.min.js"></script>
+
+<script>
+
+    $('.perfil-box img').transition({ opacity: 1, scale: 1}, 800);
+    $('.perfil-box h2').transition({ opacity: 1, scale: 1}, 800);
+    $('.perfil-box h3').transition({ opacity: 1, scale: 1}, 800);
+
+    $('.encuestas-box .encuesta-item:nth-child(2)').transition({ translate: 0, opacity:1, delay: 200 }, 1500, 'snap');
+    $('.encuestas-box .encuesta-item:nth-child(3)').transition({ translate: 0, opacity:1, delay: 500 }, 1500, 'snap');
+    $('.encuestas-box .encuesta-item:nth-child(4)').transition({ translate: 0, opacity:1, delay: 700 }, 1500, 'snap');
+    $('.encuestas-box .encuesta-item:nth-child(5)').transition({ translate: 0, opacity:1, delay: 900 }, 1500, 'snap');
+    $('.encuestas-box .encuesta-item:nth-child(6)').transition({ translate: 0, opacity:1, delay: 1300 }, 1500, 'snap');
+
+    $('.encuesta-item').click(function(e){
+        e.preventDefault();
+        var href = $(this).attr('href');
+        $(this).transition({ x: 210, opacity: 0 }, 1200, 'snap',function(){
+            window.location = href;
+        });
+
+    });
+
+</script>
+</body>
+</html>
